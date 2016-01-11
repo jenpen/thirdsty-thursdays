@@ -23,6 +23,10 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'autoprefixer-rails'
 # provides the Font-Awesome web fonts and stylesheets
 gem 'font-awesome-rails'
+# provides access to moment.js library in rails
+gem 'momentjs-rails'
+
+
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
