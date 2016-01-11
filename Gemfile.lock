@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/zpaulovics/datetimepicker-rails
+  revision: f0316e55d6a46794e56d5e636ea838c9eaef34cb
+  tag: v1.0.0
+  specs:
+    datetimepicker-rails (0.0.8)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -176,6 +183,7 @@ DEPENDENCIES
   bootstrap-sass (~> 3.3.6)
   byebug
   coffee-rails (~> 4.1.0)
+  datetimepicker-rails!
   devise
   font-awesome-rails
   jbuilder (~> 2.0)
