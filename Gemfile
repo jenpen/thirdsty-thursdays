@@ -62,6 +62,5 @@ group :development do
   gem 'spring'
   # Replaces standard error page with better and more useful error page
   gem 'better_errors'
-  # Optional dependcy for better errors with local/instance variable inspection
-  gem 'binding_of_caller'
+
 end
