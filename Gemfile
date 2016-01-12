@@ -25,7 +25,11 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-rails'
 # provides access to moment.js library in rails
 gem 'momentjs-rails'
+
 gem 'datetimepicker-rails', git: 'git://github.com/zpaulovics/datetimepicker-rails', tag: 'v1.0.0'
+# Classier solution for file uploads for Rails, Sinatra and other Ruby web frameworks
+gem 'carrierwave'
+
 
 
 
