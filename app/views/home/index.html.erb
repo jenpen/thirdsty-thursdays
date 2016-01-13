@@ -1,7 +1,0 @@
-<%= form_for @post do |f| %>
-  <div class="form-group">
-    <%= f.text_area :content, class: "form-control", autofocus: true, placeholder: "Post Here" %>
-    <%= f.file_field :attachment, class: "form-control" %>
-  </div>
-  <%= f.submit :post, class: "btn btn-primary" %>
-<% end %>

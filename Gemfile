@@ -28,8 +28,8 @@ gem 'momentjs-rails'
 # Classier solution for file uploads for Rails, Sinatra and other Ruby web frameworks
 gem 'carrierwave'
 gem 'pry'
-gem 'acts_as_votable'
-gem 'acts_as_commentable'
+# Authorization gem
+gem 'cancancan', '~> 1.10'
 
 
 
