@@ -15,13 +15,20 @@
     <%= f.label :title %><br>
     <%= f.text_field :title %>
   </div>
+
   <div class="field">
-    <%= f.label :date %><br>
+    <%= f.label :date%><br>
+    <i>(YYYY/Month/DD Time)</i><br>
     <%= f.datetime_select :date %>
   </div>
+
   <div class="field">
     <%= f.label :location %><br>
     <%= f.text_field :location %>
+  </div>
+
+  <div class="field">
+    <%= f.hidden_field :user_id %>
   </div>
   <div class="actions">
     <%= f.submit %>
