@@ -17,3 +17,20 @@
  @import "materialize";
  @import "font-awesome";
  @import "*";
+
+ html {
+   background: url(  ../images/bg.jpeg) no-repeat center center fixed;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+ }
+
+body {
+  background-color: transparent;
+}
+
+.container {
+  background-color: RGBA(255, 255, 255, .9);
+  padding: 1em 5em 10em 5em;
+  }

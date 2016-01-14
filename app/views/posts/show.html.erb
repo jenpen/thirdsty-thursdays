@@ -1,18 +1,10 @@
-<p>
-  <strong>Attachment:</strong>
-  <%= @post.attachment %>
-</p>
+<p><%= @post.content %></p>
 
-<p>
-  <strong>Content:</strong>
-  <%= @post.content %>
-</p>
-
-<%# if can? :edit, @post %>
+<% if can? :edit, @post %>
 <%= link_to 'Edit', edit_post_path(@post) %> |
-<%# end %>
-<%# if can? :destry, @post %>
+<% end %>
+<% if can? :destroy, @post %>
 <%= link_to 'Delete', @post, method: :delete %>
-<%# end %>
-
-<button class="btn waves-effect"><%= link_to 'Back to All Posts', posts_path %></button>
+<% end %>
+<br/>
+<button><%= link_to 'Back to All Posts', posts_path %></button>

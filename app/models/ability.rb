@@ -3,10 +3,10 @@ class Ability
 
   def initialize(user)
 
-    can :read, Event
+    can :read, [Event, Post]
     if user
-      can :create, Event
-      can [:update, :destroy], Event, :user => user
+      can :create, [Event, Post]
+      can [:update, :destroy], [Event, Post], :user => user
     end
 
     # can :read, Post
