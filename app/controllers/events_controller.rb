@@ -26,7 +26,9 @@ class EventsController < ApplicationController
   # POST /events
   # POST /events.json
   def create
-    @event = Event.new(event_params)
+    @event = Event.new(event_params) do |event|
+      event.user = current_user
+    end
 
     respond_to do |format|
       if @event.save
@@ -69,6 +71,6 @@ class EventsController < ApplicationController
     end
 
     def event_params
-      params.require(:event).permit(:title, :date, :location)
+      params.require(:event).permit(:title, :date, :location, :user_id)
     end
 end

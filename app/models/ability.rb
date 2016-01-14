@@ -1,10 +1,18 @@
 class Ability
   include CanCan::Ability
+
   def initialize(user)
-    can :read, [Event, Post]
+
+    can :read, Event
     if user
-      can :create, [Event, Post]
-      can [:update, :destroy], [Event, Post], :user_id => user.id
+      can :create, Event
+      can [:update, :destroy], Event, :user => user
     end
+
+    # can :read, Post
+    # if user
+    #   can :create, Post
+    #   can [:update, :destroy], Post, :user => user
+    # end
   end
 end

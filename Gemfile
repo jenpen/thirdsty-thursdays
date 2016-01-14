@@ -17,8 +17,9 @@ gem 'coffee-rails', '~> 4.1.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
-# bootstrap sass
-gem 'bootstrap-sass', '~> 3.3.6'
+# materialze sass
+gem 'materialize-sass'
+
 # parse CSS and add vendor prefixes to CSS rules
 gem 'autoprefixer-rails'
 # provides the Font-Awesome web fonts and stylesheets

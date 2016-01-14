@@ -18,7 +18,7 @@
         <td><%= link_to event.title, event %></td>
         <td><%= event.get_human_readable_time %></td>
         <td><%= event.location %></td>
-        <td><%= link_to 'View Event', event %></td>
+          <td><%= link_to 'View Event', event %></td>
         <% if can? :update, @event %>
           <td><%= link_to 'Edit', edit_event_path(event) %></td>
         <% end %>
@@ -32,4 +32,4 @@
 
 <br>
 
-<%= link_to 'Create a New Event', new_event_path %>
+<button class="btn waves-effect"><%= link_to 'Create a New Event', new_event_path %></button>
