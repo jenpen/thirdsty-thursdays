@@ -1,0 +1,31 @@
+<nav>
+  <div class="nav-wrapper green">
+    <%= link_to "Thirdsty Thursdays", events_path, class: "brand-logo right" %>
+    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
+    <ul class="left hide-on-med-and-down">
+      <li><%= link_to "Events", events_path %></li>
+      <!-- User Authentication -->
+      <% if current_user %>
+      <li><%= link_to "Logout", destroy_user_session_path, method: :delete %>
+      </li>
+      <li><%= link_to "Edit My Account", edit_user_registration_path %></li>
+      <% else %>
+      <li><%= link_to "Sign Up", new_user_registration_path %></li>
+      <li><%= link_to "Sign In", new_user_session_path %></li>
+      <% end %>
+    </ul>
+    <ul class="side-nav" id="mobile-demo">
+      <li><%= link_to "Events", events_path %></li>
+      <!-- User Authentication -->
+      <% if current_user %>
+      <li><%= link_to "Logout", destroy_user_session_path, method: :delete %>
+      </li>
+      <li><%= link_to "Edit My Account", edit_user_registration_path %></li>
+      <% else %>
+      <li><%= link_to "Sign Up", new_user_registration_path %></li>
+      <li><%= link_to "Sign In", new_user_session_path %></li>
+      <% end %>
+    </ul>
+  </div>
+</nav>

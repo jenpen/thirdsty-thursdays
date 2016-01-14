@@ -5,27 +5,54 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
 <body>
 
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+<!-- Would like to break this out into a partial -->
+  <%#= render :partial => "menu" %>
 
-<ul>
-  <li><%= link_to "Home", root_path %></li>
-  <li><%= link_to "Events", events_path %></li>
-  <!-- User Authentication -->
-  <% if current_user %>
-    <li><%= link_to "Logout", destroy_user_session_path, method: :delete %>
-    </li>
-  <li><%= link_to "Edit My Account", edit_user_registration_path %></li>
-  <% else %>
-    <li><%= link_to "Sign Up", new_user_registration_path %></li>
-    <li><%= link_to "Sign In", new_user_session_path %></li>
-  <% end %>
-</ul>
+<!-- Navigation -->
+  <nav>
+    <div class="nav-wrapper green">
+      <%= link_to "Thirdsty Thursdays", events_path, class: "brand-logo right" %>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 
-<%= yield %>
+      <ul class="left hide-on-med-and-down">
+        <li><%= link_to "Events", events_path %></li>
+        <!-- User Authentication -->
+        <% if current_user %>
+        <li><%= link_to "Logout", destroy_user_session_path, method: :delete %>
+        </li>
+        <li><%= link_to "Edit My Account", edit_user_registration_path %></li>
+        <% else %>
+        <li><%= link_to "Sign Up", new_user_registration_path %></li>
+        <li><%= link_to "Sign In", new_user_session_path %></li>
+        <% end %>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><%= link_to "Events", events_path %></li>
+        <!-- User Authentication -->
+        <% if current_user %>
+        <li><%= link_to "Logout", destroy_user_session_path, method: :delete %>
+        </li>
+        <li><%= link_to "Edit My Account", edit_user_registration_path %></li>
+        <% else %>
+        <li><%= link_to "Sign Up", new_user_registration_path %></li>
+        <li><%= link_to "Sign In", new_user_session_path %></li>
+        <% end %>
+      </ul>
+    </div>
+  </nav>
+<!-- End Navigation -->
 
+<div class="container">
+
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+
+  <%= yield %>
+</div>
 </body>
 </html>

@@ -18,8 +18,8 @@
 
   <div class="field">
     <%= f.label :date%><br>
-    <i>(YYYY/Month/DD Time)</i><br>
-    <%= f.datetime_select :date %>
+    <i>(YYYY/Month/DD hh:mm)</i><br>
+    <%= f.date :date, class: 'datetimepicker' %>
   </div>
 
   <div class="field">
