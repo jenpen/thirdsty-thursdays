@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ThirdstyThursdays</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+  <!-- Additional Materialize -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
 </head>
+
 <body>
-
-<!-- Would like to break this out into a partial -->
-  <%#= render :partial => "menu" %>
-
-<!-- Navigation -->
+  <!-- Render partial for navigation -->
+  <!-- Navigation -->
   <nav>
     <div class="nav-wrapper cyan lighten-3">
       <%= link_to "Thirdsty Thursdays", root_path, class: "brand-logo right" %>
@@ -21,38 +21,41 @@
 
       <ul class="left hide-on-med-and-down">
         <li><%= link_to "Events", events_path %></li>
+        <li><%= link_to "Posts", posts_path %></li>
         <!-- User Authentication -->
         <% if current_user %>
-        <li><%= link_to "Logout", destroy_user_session_path, method: :delete %>
-        </li>
-        <li><%= link_to "Edit My Account", edit_user_registration_path %></li>
+          <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+          <li><%= link_to "Change Password", edit_user_registration_path %></li>
         <% else %>
-        <li><%= link_to "Sign Up", new_user_registration_path %></li>
-        <li><%= link_to "Sign In", new_user_session_path %></li>
+          <li><%= link_to "Sign Up", new_user_registration_path %></li>
+          <li><%= link_to "Sign In", new_user_session_path %></li>
         <% end %>
       </ul>
       <ul class="side-nav cyan lighten-3" id="mobile-demo">
         <li><%= link_to "Events", events_path %></li>
+        <li><%= link_to "Posts", posts_path %></li>
         <!-- User Authentication -->
         <% if current_user %>
-        <li><%= link_to "Logout", destroy_user_session_path, method: :delete %>
-        </li>
-        <li><%= link_to "Edit My Account", edit_user_registration_path %></li>
+          <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+          <li><%= link_to "Change Password", edit_user_registration_path %></li>
         <% else %>
-        <li><%= link_to "Sign Up", new_user_registration_path %></li>
-        <li><%= link_to "Sign In", new_user_session_path %></li>
+          <li><%= link_to "Sign Up", new_user_registration_path %></li>
+          <li><%= link_to "Sign In", new_user_session_path %></li>
         <% end %>
       </ul>
     </div>
   </nav>
-<!-- End Navigation -->
+  <!-- End Navigation -->
 
-<div class="container">
+  <div class="container">
+    <!-- Set flash messages up here -->
+    <div class="messages">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </div>
 
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+      <%= yield %>
 
-  <%= yield %>
-</div>
+  </div>
 </body>
 </html>

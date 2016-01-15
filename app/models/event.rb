@@ -5,6 +5,7 @@ class Event < ActiveRecord::Base
     # play with this string to convert to whatever I want.
     # figure out what rfc822 is
     # string_date = date.to_s(:rfc822)
-    string_date = date.to_s(:rfc822)
+    string_date = date.to_formatted_s(:long)          # => "December 04, 2007 00:00"
+
   end
 end
