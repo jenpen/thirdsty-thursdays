@@ -20,7 +20,8 @@
     <span class="card-title grey-text text-darken-4"><%= link_to event.title, event %><i class="material-icons right">close</i></span>
     <ul>
       <li><%= event.get_human_readable_time %></li>
-      <li><%= event.location %></li>
+      <li>Where: <%= event.location %></li>
+      <li>Other Info: <%= event.notes %></li>
     </ul>
   </div>
 </div>

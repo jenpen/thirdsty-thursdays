@@ -11,7 +11,7 @@
     </div>
   <% end %>
 
-  <div class="field datetimepicker">
+  <div class="field">
     <%= f.label :title %><br>
     <%= f.text_field :title %>
   </div>
@@ -27,9 +27,14 @@
   </div>
 
   <div class="field">
+    <%= f.label :notes %><br>
+    <%= f.text_field :notes %>
+  </div>
+
+  <div class="field">
     <%= f.hidden_field :user_id %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <button class="btn waves-effect waves-light cyan lighten-3"><%= f.submit %></button>
   </div>
 <% end %>
