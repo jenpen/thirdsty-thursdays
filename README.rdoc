@@ -2,15 +2,15 @@
 
 An application to connect WDI-7 users. Monthly happy hour information and other events will be posted regularly
 
-#Technologies Used:
+Technologies Used:
 * Ruby version: 2.2.3
 * Rails version: 4.2.4
 * Postgres: 9.4.4.1
 
-#To deploy
+To deploy:
 Clone this repository and run bundle install.
 
-#Upcoming Features:
+Upcoming Features:
 * User comments
 * User likes
 * User rsvp for events
