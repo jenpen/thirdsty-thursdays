@@ -5,6 +5,7 @@ class EventsController < ApplicationController
 
   # GET /events
   # GET /events.json
+  # Exclude events that have passed
   def index
     @events = Event.where("date >= ?", Date.today).order('date')
     @event = Event.new

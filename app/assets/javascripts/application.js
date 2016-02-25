@@ -24,10 +24,10 @@ $(document).on('ready page:change', function() {
 
 // Add calendar select option for event date when creating an event
   $('.datepicker').pickadate({
-    selectMonths: true, // Creates a dropdown to control month      selectYears: 15 // Creates a dropdown of 15 years to control year
+    selectMonths: true, // Creates a dropdown to control month
   });
 
 // Set timeout on messages
-  
+
 
 });
